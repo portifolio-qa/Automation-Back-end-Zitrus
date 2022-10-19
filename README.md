@@ -1,8 +1,7 @@
 # Automation-Back-end-Zitrus
 
-Project - Automation Back-end Zitrus
-
-    Este projeto, foi desenvolvido para o cliente: Zitrus. Neste projeto, o objetivo é checar as habilidades básicas de automação e cenários de testes.
+  Este projeto, foi desenvolvido para o cliente: Zitrus. 
+  Neste projeto, o objetivo é checar as habilidades básicas de automação e cenários de testes.
 
 # Requisitos do Projeto
 
