@@ -1,0 +1,818 @@
+{
+	"info": {
+		"_postman_id": "839f2dfa-bef8-4160-b058-e48f406aaf4f",
+		"name": "GitHub",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18826893"
+	},
+	"item": [
+		{
+			"name": "Criar repositórios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Teste1\",\"description\":\"This is your first repo!\",\"homepage\":\"https://github.com\",\"private\":false,\"is_template\":true}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.github.com/orgs/labsqa",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"orgs",
+						"labsqa"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Criar repositórios",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Hello-World\",\"description\":\"This is your first repo!\",\"homepage\":\"https://github.com\",\"private\":false,\"is_template\":true}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/user/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"user",
+								"repos"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "GitHub.com"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Oct 2022 22:04:10 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5553"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, max-age=60, s-maxage=60"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Authorization, Cookie, X-GitHub-OTP"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding, Accept, X-Requested-With"
+						},
+						{
+							"key": "ETag",
+							"value": "\"9aafb17c7744d3c1039a0f331850744119eb6409a35d27bf0aeaed0e0d0a9955\""
+						},
+						{
+							"key": "X-OAuth-Scopes",
+							"value": "admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key, admin:repo_hook, admin:ssh_signing_key, delete:packages, delete_repo, gist, notifications, project, repo, user, workflow, write:discussion, write:packages"
+						},
+						{
+							"key": "X-Accepted-OAuth-Scopes",
+							"value": "public_repo, repo"
+						},
+						{
+							"key": "Location",
+							"value": "https://api.github.com/repos/qarosedias/Hello-World"
+						},
+						{
+							"key": "X-GitHub-Media-Type",
+							"value": "github.v3; format=json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "5000"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "4981"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1666045639"
+						},
+						{
+							"key": "X-RateLimit-Used",
+							"value": "19"
+						},
+						{
+							"key": "X-RateLimit-Resource",
+							"value": "core"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubdomains; preload"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "deny"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "origin-when-cross-origin, strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'none'"
+						},
+						{
+							"key": "X-GitHub-Request-Id",
+							"value": "F3CD:3ECF:8D92E:95279:634DD158"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 553204524,\n    \"node_id\": \"R_kgDOIPk7LA\",\n    \"name\": \"Hello-World\",\n    \"full_name\": \"qarosedias/Hello-World\",\n    \"private\": false,\n    \"owner\": {\n        \"login\": \"qarosedias\",\n        \"id\": 115903416,\n        \"node_id\": \"U_kgDOBuiLuA\",\n        \"avatar_url\": \"https://avatars.githubusercontent.com/u/115903416?v=4\",\n        \"gravatar_id\": \"\",\n        \"url\": \"https://api.github.com/users/qarosedias\",\n        \"html_url\": \"https://github.com/qarosedias\",\n        \"followers_url\": \"https://api.github.com/users/qarosedias/followers\",\n        \"following_url\": \"https://api.github.com/users/qarosedias/following{/other_user}\",\n        \"gists_url\": \"https://api.github.com/users/qarosedias/gists{/gist_id}\",\n        \"starred_url\": \"https://api.github.com/users/qarosedias/starred{/owner}{/repo}\",\n        \"subscriptions_url\": \"https://api.github.com/users/qarosedias/subscriptions\",\n        \"organizations_url\": \"https://api.github.com/users/qarosedias/orgs\",\n        \"repos_url\": \"https://api.github.com/users/qarosedias/repos\",\n        \"events_url\": \"https://api.github.com/users/qarosedias/events{/privacy}\",\n        \"received_events_url\": \"https://api.github.com/users/qarosedias/received_events\",\n        \"type\": \"User\",\n        \"site_admin\": false\n    },\n    \"html_url\": \"https://github.com/qarosedias/Hello-World\",\n    \"description\": \"This is your first repo!\",\n    \"fork\": false,\n    \"url\": \"https://api.github.com/repos/qarosedias/Hello-World\",\n    \"forks_url\": \"https://api.github.com/repos/qarosedias/Hello-World/forks\",\n    \"keys_url\": \"https://api.github.com/repos/qarosedias/Hello-World/keys{/key_id}\",\n    \"collaborators_url\": \"https://api.github.com/repos/qarosedias/Hello-World/collaborators{/collaborator}\",\n    \"teams_url\": \"https://api.github.com/repos/qarosedias/Hello-World/teams\",\n    \"hooks_url\": \"https://api.github.com/repos/qarosedias/Hello-World/hooks\",\n    \"issue_events_url\": \"https://api.github.com/repos/qarosedias/Hello-World/issues/events{/number}\",\n    \"events_url\": \"https://api.github.com/repos/qarosedias/Hello-World/events\",\n    \"assignees_url\": \"https://api.github.com/repos/qarosedias/Hello-World/assignees{/user}\",\n    \"branches_url\": \"https://api.github.com/repos/qarosedias/Hello-World/branches{/branch}\",\n    \"tags_url\": \"https://api.github.com/repos/qarosedias/Hello-World/tags\",\n    \"blobs_url\": \"https://api.github.com/repos/qarosedias/Hello-World/git/blobs{/sha}\",\n    \"git_tags_url\": \"https://api.github.com/repos/qarosedias/Hello-World/git/tags{/sha}\",\n    \"git_refs_url\": \"https://api.github.com/repos/qarosedias/Hello-World/git/refs{/sha}\",\n    \"trees_url\": \"https://api.github.com/repos/qarosedias/Hello-World/git/trees{/sha}\",\n    \"statuses_url\": \"https://api.github.com/repos/qarosedias/Hello-World/statuses/{sha}\",\n    \"languages_url\": \"https://api.github.com/repos/qarosedias/Hello-World/languages\",\n    \"stargazers_url\": \"https://api.github.com/repos/qarosedias/Hello-World/stargazers\",\n    \"contributors_url\": \"https://api.github.com/repos/qarosedias/Hello-World/contributors\",\n    \"subscribers_url\": \"https://api.github.com/repos/qarosedias/Hello-World/subscribers\",\n    \"subscription_url\": \"https://api.github.com/repos/qarosedias/Hello-World/subscription\",\n    \"commits_url\": \"https://api.github.com/repos/qarosedias/Hello-World/commits{/sha}\",\n    \"git_commits_url\": \"https://api.github.com/repos/qarosedias/Hello-World/git/commits{/sha}\",\n    \"comments_url\": \"https://api.github.com/repos/qarosedias/Hello-World/comments{/number}\",\n    \"issue_comment_url\": \"https://api.github.com/repos/qarosedias/Hello-World/issues/comments{/number}\",\n    \"contents_url\": \"https://api.github.com/repos/qarosedias/Hello-World/contents/{+path}\",\n    \"compare_url\": \"https://api.github.com/repos/qarosedias/Hello-World/compare/{base}...{head}\",\n    \"merges_url\": \"https://api.github.com/repos/qarosedias/Hello-World/merges\",\n    \"archive_url\": \"https://api.github.com/repos/qarosedias/Hello-World/{archive_format}{/ref}\",\n    \"downloads_url\": \"https://api.github.com/repos/qarosedias/Hello-World/downloads\",\n    \"issues_url\": \"https://api.github.com/repos/qarosedias/Hello-World/issues{/number}\",\n    \"pulls_url\": \"https://api.github.com/repos/qarosedias/Hello-World/pulls{/number}\",\n    \"milestones_url\": \"https://api.github.com/repos/qarosedias/Hello-World/milestones{/number}\",\n    \"notifications_url\": \"https://api.github.com/repos/qarosedias/Hello-World/notifications{?since,all,participating}\",\n    \"labels_url\": \"https://api.github.com/repos/qarosedias/Hello-World/labels{/name}\",\n    \"releases_url\": \"https://api.github.com/repos/qarosedias/Hello-World/releases{/id}\",\n    \"deployments_url\": \"https://api.github.com/repos/qarosedias/Hello-World/deployments\",\n    \"created_at\": \"2022-10-17T22:04:08Z\",\n    \"updated_at\": \"2022-10-17T22:04:08Z\",\n    \"pushed_at\": \"2022-10-17T22:04:09Z\",\n    \"git_url\": \"git://github.com/qarosedias/Hello-World.git\",\n    \"ssh_url\": \"git@github.com:qarosedias/Hello-World.git\",\n    \"clone_url\": \"https://github.com/qarosedias/Hello-World.git\",\n    \"svn_url\": \"https://github.com/qarosedias/Hello-World\",\n    \"homepage\": \"https://github.com\",\n    \"size\": 0,\n    \"stargazers_count\": 0,\n    \"watchers_count\": 0,\n    \"language\": null,\n    \"has_issues\": true,\n    \"has_projects\": true,\n    \"has_downloads\": true,\n    \"has_wiki\": true,\n    \"has_pages\": false,\n    \"forks_count\": 0,\n    \"mirror_url\": null,\n    \"archived\": false,\n    \"disabled\": false,\n    \"open_issues_count\": 0,\n    \"license\": null,\n    \"allow_forking\": true,\n    \"is_template\": true,\n    \"web_commit_signoff_required\": false,\n    \"topics\": [],\n    \"visibility\": \"public\",\n    \"forks\": 0,\n    \"open_issues\": 0,\n    \"watchers\": 0,\n    \"default_branch\": \"main\",\n    \"permissions\": {\n        \"admin\": true,\n        \"maintain\": true,\n        \"push\": true,\n        \"triage\": true,\n        \"pull\": true\n    },\n    \"allow_squash_merge\": true,\n    \"allow_merge_commit\": true,\n    \"allow_rebase_merge\": true,\n    \"allow_auto_merge\": false,\n    \"delete_branch_on_merge\": false,\n    \"allow_update_branch\": false,\n    \"use_squash_pr_title_as_default\": false,\n    \"squash_merge_commit_message\": \"COMMIT_MESSAGES\",\n    \"squash_merge_commit_title\": \"COMMIT_OR_PR_TITLE\",\n    \"merge_commit_message\": \"PR_TITLE\",\n    \"merge_commit_title\": \"MERGE_MESSAGE\",\n    \"network_count\": 0,\n    \"subscribers_count\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Listar repositórios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/vnd.github+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.github.com/users/qarosedias/repos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"users",
+						"qarosedias",
+						"repos"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Listar repositórios",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/vnd.github+json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.github.com/users/qarosedias/repos",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"users",
+								"qarosedias",
+								"repos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "GitHub.com"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Oct 2022 22:04:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, max-age=60, s-maxage=60"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Authorization, Cookie, X-GitHub-OTP"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding, Accept, X-Requested-With"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"915a87bc2d324e1bd35b988715f5b1c5f1fc4f8c786ebd73b506dd333264b67c\""
+						},
+						{
+							"key": "X-OAuth-Scopes",
+							"value": "admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key, admin:repo_hook, admin:ssh_signing_key, delete:packages, delete_repo, gist, notifications, project, repo, user, workflow, write:discussion, write:packages"
+						},
+						{
+							"key": "X-Accepted-OAuth-Scopes",
+							"value": ""
+						},
+						{
+							"key": "X-GitHub-Media-Type",
+							"value": "github.v3; format=json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "5000"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "4979"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1666045639"
+						},
+						{
+							"key": "X-RateLimit-Used",
+							"value": "21"
+						},
+						{
+							"key": "X-RateLimit-Resource",
+							"value": "core"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubdomains; preload"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "deny"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "origin-when-cross-origin, strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'none'"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "X-GitHub-Request-Id",
+							"value": "F3CD:3ECF:8E617:9601A:634DD182"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 553204524,\n        \"node_id\": \"R_kgDOIPk7LA\",\n        \"name\": \"Hello-World\",\n        \"full_name\": \"qarosedias/Hello-World\",\n        \"private\": false,\n        \"owner\": {\n            \"login\": \"qarosedias\",\n            \"id\": 115903416,\n            \"node_id\": \"U_kgDOBuiLuA\",\n            \"avatar_url\": \"https://avatars.githubusercontent.com/u/115903416?v=4\",\n            \"gravatar_id\": \"\",\n            \"url\": \"https://api.github.com/users/qarosedias\",\n            \"html_url\": \"https://github.com/qarosedias\",\n            \"followers_url\": \"https://api.github.com/users/qarosedias/followers\",\n            \"following_url\": \"https://api.github.com/users/qarosedias/following{/other_user}\",\n            \"gists_url\": \"https://api.github.com/users/qarosedias/gists{/gist_id}\",\n            \"starred_url\": \"https://api.github.com/users/qarosedias/starred{/owner}{/repo}\",\n            \"subscriptions_url\": \"https://api.github.com/users/qarosedias/subscriptions\",\n            \"organizations_url\": \"https://api.github.com/users/qarosedias/orgs\",\n            \"repos_url\": \"https://api.github.com/users/qarosedias/repos\",\n            \"events_url\": \"https://api.github.com/users/qarosedias/events{/privacy}\",\n            \"received_events_url\": \"https://api.github.com/users/qarosedias/received_events\",\n            \"type\": \"User\",\n            \"site_admin\": false\n        },\n        \"html_url\": \"https://github.com/qarosedias/Hello-World\",\n        \"description\": \"This is your first repo!\",\n        \"fork\": false,\n        \"url\": \"https://api.github.com/repos/qarosedias/Hello-World\",\n        \"forks_url\": \"https://api.github.com/repos/qarosedias/Hello-World/forks\",\n        \"keys_url\": \"https://api.github.com/repos/qarosedias/Hello-World/keys{/key_id}\",\n        \"collaborators_url\": \"https://api.github.com/repos/qarosedias/Hello-World/collaborators{/collaborator}\",\n        \"teams_url\": \"https://api.github.com/repos/qarosedias/Hello-World/teams\",\n        \"hooks_url\": \"https://api.github.com/repos/qarosedias/Hello-World/hooks\",\n        \"issue_events_url\": \"https://api.github.com/repos/qarosedias/Hello-World/issues/events{/number}\",\n        \"events_url\": \"https://api.github.com/repos/qarosedias/Hello-World/events\",\n        \"assignees_url\": \"https://api.github.com/repos/qarosedias/Hello-World/assignees{/user}\",\n        \"branches_url\": \"https://api.github.com/repos/qarosedias/Hello-World/branches{/branch}\",\n        \"tags_url\": \"https://api.github.com/repos/qarosedias/Hello-World/tags\",\n        \"blobs_url\": \"https://api.github.com/repos/qarosedias/Hello-World/git/blobs{/sha}\",\n        \"git_tags_url\": \"https://api.github.com/repos/qarosedias/Hello-World/git/tags{/sha}\",\n        \"git_refs_url\": \"https://api.github.com/repos/qarosedias/Hello-World/git/refs{/sha}\",\n        \"trees_url\": \"https://api.github.com/repos/qarosedias/Hello-World/git/trees{/sha}\",\n        \"statuses_url\": \"https://api.github.com/repos/qarosedias/Hello-World/statuses/{sha}\",\n        \"languages_url\": \"https://api.github.com/repos/qarosedias/Hello-World/languages\",\n        \"stargazers_url\": \"https://api.github.com/repos/qarosedias/Hello-World/stargazers\",\n        \"contributors_url\": \"https://api.github.com/repos/qarosedias/Hello-World/contributors\",\n        \"subscribers_url\": \"https://api.github.com/repos/qarosedias/Hello-World/subscribers\",\n        \"subscription_url\": \"https://api.github.com/repos/qarosedias/Hello-World/subscription\",\n        \"commits_url\": \"https://api.github.com/repos/qarosedias/Hello-World/commits{/sha}\",\n        \"git_commits_url\": \"https://api.github.com/repos/qarosedias/Hello-World/git/commits{/sha}\",\n        \"comments_url\": \"https://api.github.com/repos/qarosedias/Hello-World/comments{/number}\",\n        \"issue_comment_url\": \"https://api.github.com/repos/qarosedias/Hello-World/issues/comments{/number}\",\n        \"contents_url\": \"https://api.github.com/repos/qarosedias/Hello-World/contents/{+path}\",\n        \"compare_url\": \"https://api.github.com/repos/qarosedias/Hello-World/compare/{base}...{head}\",\n        \"merges_url\": \"https://api.github.com/repos/qarosedias/Hello-World/merges\",\n        \"archive_url\": \"https://api.github.com/repos/qarosedias/Hello-World/{archive_format}{/ref}\",\n        \"downloads_url\": \"https://api.github.com/repos/qarosedias/Hello-World/downloads\",\n        \"issues_url\": \"https://api.github.com/repos/qarosedias/Hello-World/issues{/number}\",\n        \"pulls_url\": \"https://api.github.com/repos/qarosedias/Hello-World/pulls{/number}\",\n        \"milestones_url\": \"https://api.github.com/repos/qarosedias/Hello-World/milestones{/number}\",\n        \"notifications_url\": \"https://api.github.com/repos/qarosedias/Hello-World/notifications{?since,all,participating}\",\n        \"labels_url\": \"https://api.github.com/repos/qarosedias/Hello-World/labels{/name}\",\n        \"releases_url\": \"https://api.github.com/repos/qarosedias/Hello-World/releases{/id}\",\n        \"deployments_url\": \"https://api.github.com/repos/qarosedias/Hello-World/deployments\",\n        \"created_at\": \"2022-10-17T22:04:08Z\",\n        \"updated_at\": \"2022-10-17T22:04:08Z\",\n        \"pushed_at\": \"2022-10-17T22:04:09Z\",\n        \"git_url\": \"git://github.com/qarosedias/Hello-World.git\",\n        \"ssh_url\": \"git@github.com:qarosedias/Hello-World.git\",\n        \"clone_url\": \"https://github.com/qarosedias/Hello-World.git\",\n        \"svn_url\": \"https://github.com/qarosedias/Hello-World\",\n        \"homepage\": \"https://github.com\",\n        \"size\": 0,\n        \"stargazers_count\": 0,\n        \"watchers_count\": 0,\n        \"language\": null,\n        \"has_issues\": true,\n        \"has_projects\": true,\n        \"has_downloads\": true,\n        \"has_wiki\": true,\n        \"has_pages\": false,\n        \"forks_count\": 0,\n        \"mirror_url\": null,\n        \"archived\": false,\n        \"disabled\": false,\n        \"open_issues_count\": 0,\n        \"license\": null,\n        \"allow_forking\": true,\n        \"is_template\": true,\n        \"web_commit_signoff_required\": false,\n        \"topics\": [],\n        \"visibility\": \"public\",\n        \"forks\": 0,\n        \"open_issues\": 0,\n        \"watchers\": 0,\n        \"default_branch\": \"main\",\n        \"permissions\": {\n            \"admin\": true,\n            \"maintain\": true,\n            \"push\": true,\n            \"triage\": true,\n            \"pull\": true\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Criar ISSUE repositórios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.github+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"Found a bug\",\"body\":\"I'm having a problem with this.\",\"assignees\":[\"qarosedias\"],\"milestone\":null,\"labels\":[\"bug\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.github.com/repos/qarosedias/Hello-World/issues",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"qarosedias",
+						"Hello-World",
+						"issues"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Criar ISSUE repositórios",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.github+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\":\"Found a bug\",\"body\":\"I'm having a problem with this.\",\"assignees\":[\"qarosedias\"],\"milestone\":null,\"labels\":[\"bug\"]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.github.com/repos/qarosedias/Hello-World/issues",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"qarosedias",
+								"Hello-World",
+								"issues"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "GitHub.com"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 17 Oct 2022 22:19:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4166"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "private, max-age=60, s-maxage=60"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Authorization, Cookie, X-GitHub-OTP"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding, Accept, X-Requested-With"
+						},
+						{
+							"key": "ETag",
+							"value": "\"9a42c68c7fc9c0ac582834785029bcdd8347b81b5e7bb1bdec58c91d243a662d\""
+						},
+						{
+							"key": "X-OAuth-Scopes",
+							"value": "admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key, admin:repo_hook, admin:ssh_signing_key, delete:packages, delete_repo, gist, notifications, project, repo, user, workflow, write:discussion, write:packages"
+						},
+						{
+							"key": "X-Accepted-OAuth-Scopes",
+							"value": ""
+						},
+						{
+							"key": "Location",
+							"value": "https://api.github.com/repos/qarosedias/Hello-World/issues/1"
+						},
+						{
+							"key": "X-GitHub-Media-Type",
+							"value": "github.v3; format=json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "5000"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "4964"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1666045639"
+						},
+						{
+							"key": "X-RateLimit-Used",
+							"value": "36"
+						},
+						{
+							"key": "X-RateLimit-Resource",
+							"value": "core"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubdomains; preload"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "deny"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "origin-when-cross-origin, strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'none'"
+						},
+						{
+							"key": "X-GitHub-Request-Id",
+							"value": "CD60:25C3:B08F75:C022CE:634DD4EF"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"url\": \"https://api.github.com/repos/qarosedias/Hello-World/issues/1\",\n    \"repository_url\": \"https://api.github.com/repos/qarosedias/Hello-World\",\n    \"labels_url\": \"https://api.github.com/repos/qarosedias/Hello-World/issues/1/labels{/name}\",\n    \"comments_url\": \"https://api.github.com/repos/qarosedias/Hello-World/issues/1/comments\",\n    \"events_url\": \"https://api.github.com/repos/qarosedias/Hello-World/issues/1/events\",\n    \"html_url\": \"https://github.com/qarosedias/Hello-World/issues/1\",\n    \"id\": 1412303832,\n    \"node_id\": \"I_kwDOIPk7LM5ULgvY\",\n    \"number\": 1,\n    \"title\": \"Found a bug\",\n    \"user\": {\n        \"login\": \"qarosedias\",\n        \"id\": 115903416,\n        \"node_id\": \"U_kgDOBuiLuA\",\n        \"avatar_url\": \"https://avatars.githubusercontent.com/u/115903416?v=4\",\n        \"gravatar_id\": \"\",\n        \"url\": \"https://api.github.com/users/qarosedias\",\n        \"html_url\": \"https://github.com/qarosedias\",\n        \"followers_url\": \"https://api.github.com/users/qarosedias/followers\",\n        \"following_url\": \"https://api.github.com/users/qarosedias/following{/other_user}\",\n        \"gists_url\": \"https://api.github.com/users/qarosedias/gists{/gist_id}\",\n        \"starred_url\": \"https://api.github.com/users/qarosedias/starred{/owner}{/repo}\",\n        \"subscriptions_url\": \"https://api.github.com/users/qarosedias/subscriptions\",\n        \"organizations_url\": \"https://api.github.com/users/qarosedias/orgs\",\n        \"repos_url\": \"https://api.github.com/users/qarosedias/repos\",\n        \"events_url\": \"https://api.github.com/users/qarosedias/events{/privacy}\",\n        \"received_events_url\": \"https://api.github.com/users/qarosedias/received_events\",\n        \"type\": \"User\",\n        \"site_admin\": false\n    },\n    \"labels\": [\n        {\n            \"id\": 4683446306,\n            \"node_id\": \"LA_kwDOIPk7LM8AAAABFye4Ig\",\n            \"url\": \"https://api.github.com/repos/qarosedias/Hello-World/labels/bug\",\n            \"name\": \"bug\",\n            \"color\": \"d73a4a\",\n            \"default\": true,\n            \"description\": \"Something isn't working\"\n        }\n    ],\n    \"state\": \"open\",\n    \"locked\": false,\n    \"assignee\": {\n        \"login\": \"qarosedias\",\n        \"id\": 115903416,\n        \"node_id\": \"U_kgDOBuiLuA\",\n        \"avatar_url\": \"https://avatars.githubusercontent.com/u/115903416?v=4\",\n        \"gravatar_id\": \"\",\n        \"url\": \"https://api.github.com/users/qarosedias\",\n        \"html_url\": \"https://github.com/qarosedias\",\n        \"followers_url\": \"https://api.github.com/users/qarosedias/followers\",\n        \"following_url\": \"https://api.github.com/users/qarosedias/following{/other_user}\",\n        \"gists_url\": \"https://api.github.com/users/qarosedias/gists{/gist_id}\",\n        \"starred_url\": \"https://api.github.com/users/qarosedias/starred{/owner}{/repo}\",\n        \"subscriptions_url\": \"https://api.github.com/users/qarosedias/subscriptions\",\n        \"organizations_url\": \"https://api.github.com/users/qarosedias/orgs\",\n        \"repos_url\": \"https://api.github.com/users/qarosedias/repos\",\n        \"events_url\": \"https://api.github.com/users/qarosedias/events{/privacy}\",\n        \"received_events_url\": \"https://api.github.com/users/qarosedias/received_events\",\n        \"type\": \"User\",\n        \"site_admin\": false\n    },\n    \"assignees\": [\n        {\n            \"login\": \"qarosedias\",\n            \"id\": 115903416,\n            \"node_id\": \"U_kgDOBuiLuA\",\n            \"avatar_url\": \"https://avatars.githubusercontent.com/u/115903416?v=4\",\n            \"gravatar_id\": \"\",\n            \"url\": \"https://api.github.com/users/qarosedias\",\n            \"html_url\": \"https://github.com/qarosedias\",\n            \"followers_url\": \"https://api.github.com/users/qarosedias/followers\",\n            \"following_url\": \"https://api.github.com/users/qarosedias/following{/other_user}\",\n            \"gists_url\": \"https://api.github.com/users/qarosedias/gists{/gist_id}\",\n            \"starred_url\": \"https://api.github.com/users/qarosedias/starred{/owner}{/repo}\",\n            \"subscriptions_url\": \"https://api.github.com/users/qarosedias/subscriptions\",\n            \"organizations_url\": \"https://api.github.com/users/qarosedias/orgs\",\n            \"repos_url\": \"https://api.github.com/users/qarosedias/repos\",\n            \"events_url\": \"https://api.github.com/users/qarosedias/events{/privacy}\",\n            \"received_events_url\": \"https://api.github.com/users/qarosedias/received_events\",\n            \"type\": \"User\",\n            \"site_admin\": false\n        }\n    ],\n    \"milestone\": null,\n    \"comments\": 0,\n    \"created_at\": \"2022-10-17T22:19:27Z\",\n    \"updated_at\": \"2022-10-17T22:19:27Z\",\n    \"closed_at\": null,\n    \"author_association\": \"OWNER\",\n    \"active_lock_reason\": null,\n    \"body\": \"I'm having a problem with this.\",\n    \"closed_by\": null,\n    \"reactions\": {\n        \"url\": \"https://api.github.com/repos/qarosedias/Hello-World/issues/1/reactions\",\n        \"total_count\": 0,\n        \"+1\": 0,\n        \"-1\": 0,\n        \"laugh\": 0,\n        \"hooray\": 0,\n        \"confused\": 0,\n        \"heart\": 0,\n        \"rocket\": 0,\n        \"eyes\": 0\n    },\n    \"timeline_url\": \"https://api.github.com/repos/qarosedias/Hello-World/issues/1/timeline\",\n    \"performed_via_github_app\": null,\n    \"state_reason\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "Deletar repositório",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.github+json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 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",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://api.github.com/repos/qarosedias/repositorios-zitrus",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"qarosedias",
+						"repositorios-zitrus"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Deletar repositório",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.github+json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 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",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://api.github.com/repos/labsqa/repositorios-zitrus",
+							"protocol": "https",
+							"host": [
+								"api",
+								"github",
+								"com"
+							],
+							"path": [
+								"repos",
+								"labsqa",
+								"repositorios-zitrus"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "GitHub.com"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 15 Oct 2022 23:49:27 GMT"
+						},
+						{
+							"key": "X-OAuth-Scopes",
+							"value": "admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key, admin:repo_hook, admin:ssh_signing_key, delete:packages, delete_repo, gist, notifications, project, repo, user, workflow, write:discussion, write:packages"
+						},
+						{
+							"key": "X-Accepted-OAuth-Scopes",
+							"value": "delete_repo"
+						},
+						{
+							"key": "X-GitHub-Media-Type",
+							"value": "github.v3; format=json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "5000"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "4955"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1665878528"
+						},
+						{
+							"key": "X-RateLimit-Used",
+							"value": "45"
+						},
+						{
+							"key": "X-RateLimit-Resource",
+							"value": "core"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubdomains; preload"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "deny"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "origin-when-cross-origin, strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'none'"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding, Accept, X-Requested-With"
+						},
+						{
+							"key": "X-GitHub-Request-Id",
+							"value": "EB02:6694:284711:2C0F3D:634B4707"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Consultar se o repositorio foi eliminado",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.github+json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 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",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://api.github.com/repos/qarosedias/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"qarosedias",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticação",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.github+json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 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",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://api.github.com/repos/qarosedias/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"qarosedias",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

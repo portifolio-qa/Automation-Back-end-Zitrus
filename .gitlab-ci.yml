@@ -1,0 +1,14 @@
+stages:
+- test
+
+run test:
+    when: always
+    stage: test
+    script:
+        - gem install bundler && bundle install && bundler exec cucumber -p gitlab
+        - cucumber -t @collection-type
+
+    artifacts:
+        when: always
+        paths:
+        - reports/html/html_report.html

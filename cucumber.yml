@@ -1,0 +1,14 @@
+---
+default: -p homolog -p html_report -p allure
+local: -p homolog -p html_report
+gitlab: -p dev -t @regression -p html_report -p allure
+
+### Nivel de ambiente ###
+homolog: NIVEL=homolog
+prod: NIVEL=prod
+dev: NIVEL=dev
+stg: NIVEL=stg
+
+html: --format html --out=reports/html/html_report.html
+html_report: --no-source --color -f pretty -f html -o reports/html/html_report.html
+allure: --format AllureCucumber::CucumberFormatter --out reports_allure

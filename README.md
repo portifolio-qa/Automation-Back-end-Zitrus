@@ -1,83 +1,156 @@
 # Automation-Back-end-Zitrus
+
 Project - Automation Back-end Zitrus
 
-​	Este projeto, foi desenvolvido para o cliente: Zitrus. Neste projeto, o objetivo é checar as habilidades básicas de automação e cenários de testes.
+    Este projeto, foi desenvolvido para o cliente: Zitrus. Neste projeto, o objetivo é checar as habilidades básicas de automação e cenários de testes.
 
 # Requisitos do Projeto
 
-- [ ] Implementar testes automatizados de back-end (API Rest), utilize a ferramenta de sua preferência
-- [ ] Utilizar a api do github para realizar os testes (https://docs.github.com/en/rest)
-- [ ] Criação de um repositorio no github
-- [ ] Consulta do repositorio criado
-- [ ] Criação de uma issue no respositorio recém criado
-- [ ] Consulta da issue
-- [ ] Exclusão do repositorio
-- [ ] Consultar se o repositorio foi eliminado
-
-# Técnicas de testes escolhidas:
-
-O projeto de teste apresenta as seguintes tecnologias:
-
-- Desenvolvido SO Windows 10 Profissional;
-- NodeJs node-v16.18.0-x64;
-- Cypress.io v10: framework de testes web;
-- Cucumber: biblioteca de testes de aceitação web;
-- BDD: para testes de negócio;
-- Linguagem Gherkin: Cucumber boilerplate (BDD para Java script), biblioteca cypress-cucumber-preprocessor
-- Desing Patterns: Page Objects
+- [X] Implementar testes automatizados de back-end (API Rest), utilize a ferramenta de sua preferência
+- [X] Utilizar a api do github para realizar os testes (https://docs.github.com/en/rest)
+- [X] Criação de um repositorio no github
+- [X] Consulta do repositorio criado
+- [X] Criação de uma issue no respositorio recém criado
+- [X] Consulta da issue
+- [X] Exclusão do repositorio
+- [X] Consultar se o repositorio foi eliminado
 
 # Estrutura do Projeto:
 
-<img src="image/README/icon_folder.png"/> **Automation-Back-end-Zitrus:** Pasta principal do projeto
+1 - Camada de services: são os métodos possíveis para cada endpoint de uma api, devem ser criados de acordo com os parametros necessários para suas execuções.
 
-<img src="image/README/icon_folder.png"/> **cypress:** Pasta do framework Cypress
+2 - Camada de specification: são arquivos por feature, contendo os BDDs que devem ser criados para cada cenário, tendo sempre o cuidade de gerar o maior reaproveitamento possível
 
-<img src="image/README/icon_folder.png"/> ***e2e***: Arquivos de teste
+3 - Camada de steps: uma vez criada as especificações, na camada de steps serão implementados cada passo necessário para se chegar ao resultado esperado.
 
-<img src="image/README/icon_folder.png"/> **features**: funcionalidades do projeto
+4 - Camada de support: onde se encontram insumos necessários para nossa automação de testes, tais como, config, massa, payloads, spec_helper e env.
 
-<img src="image/README/icon_folder.png"/> **step_definitions**: Definição de passos para executar os testes
+4.1 - Config: são definidos os endpoints e suas rotas e também a URL base da aplicação.
 
-<img src="image/README/icon_folder.png"/> **fixtures:** Arquivos estáticos que seram consumidos pelos teste
+4.2 - Massa: nessa camada, podem ser definidos as massas de testes importantes quando possuem diferentes dados de acordo com o ambiente a ser executado.
 
-<img src="image/README/icon_folder.png"/> **pages:** Padrão page objects
+4.3 - Payloads: são os arquivos .yml que são utilizados para a definição do Body nas requisições do tipo Post e Put
 
-<img src="image/README/icon_folder.png"/> **screenshots:** Evidências (prints) dos testes que falharam
+4.4 - Spec_helper: nesse ponto são instanciadas as classes definidas na camada de service para a execução dos métodos criados
 
-<img src="image/README/icon_folder.png"/> **suport:** Pasta default do cypress para comandos e configurações
+4.5 - Env: são as configurações para a execução do projeto, obs.: geralmente não sofre alterações.
 
-<img src="image/README/icon_folder.png"/> **videos:** Evidências dos testes em videos dos testes
+5 - Reports: o cucumber já possui um report nativo, que é gerado em html, nessa pasta são gerados esses reports
 
-<img src="image/README/javascript_icon_.png"/> **Arquivo cypress.json:** Configurações para executar o projetos browser
+6 - Reports_allure: são os arquivos necessários para a execução do report do allure
 
-<img src="image/README/javascript_icon_.png"/> **Arquivo [commandjs]**(https://docs.cypress.io/api/table-of-contents "Doc Comandos Cypress"): Comandos do cypress
+7 - .gitlab: são as configurações para a execução do projeto ao publicarmos no repositório correspondente
 
-<img src="image/README/javascript_icon_.png"/> **Arquivo e2e:** Primeiro arquivo carregado do cypress, tudo que precisa antes rodar os testes
+8 - Cucumber.yml: são as configurações para a execução dos testes pelo cucumber.
 
-<img src="image/README/javascript_icon_.png"/> **cypress-cucumber-preprocessorrc.json:** Arquivo Biblioteca Javascript de BDD Cucumber
+9 - Gemfile: contém todas as dependencias necessária para o projeto.
 
-<img src="image/README/javascript_icon_.png"/> **.eslintrc.json:** Arquivo  de configurações de boas práticas de codifição JavaScript e Cypress
-
-<img src="image/README/git_icon_.png"/> **.gitignore:** Arquivos que serão ignorados ao realizar os commits
-
-<img src="image/README/javascript_icon_.png"/> **cucumber-html-report.js:** Arquivo Gera relatório dos testes
-
-<img src="image/README/javascript_icon_.png"/> **cypress.config.js:** Único arquivo que não roda dentro do browser, roda no nodejs (o que o browser não consegue rodar, roda aqui). Exemplo: Conexão banco dados.
-
-<img src="image/README/javascript_icon_.png"/> **pakage.json:** Arquivo Informações do projeto
-
-<img src="image/README/javascript_icon_.png"/> **tsconfig.json:** Arquivo Informações de compilações do projeto
-
-<img src="image/README/md_file_icon_.png"/> **README.md:** Documentação do Projeto
+Comandos para a execução: cucumber - executa dos os testes já criados cucumber -t @tag - executa os cenários que possuam a tag informada (essa tag deve estar no arquivo .feature acima do cenário desejado) allure server reports_allure - iniciar o allure report
 
 # Execução do projeto:
 
-- `gitclone https://github.com/portifolio-qa/Automation-Back-end-Zitrus.git`
+    Configuração da máquina para execução do projeto:
+
+## ***CMDER***
+
+#### ***1- Baixe o Console CMDER na sua máquina (Emulador)***
+
+[https://cmder.app/](https://cmder.app/)
+
+## ***Configurando o Windows***
+
+#### *** 1- Instalar Ruby***
+
+#### ***Acessar o link ***[https://rubyinstaller.org/downloads/](https://rubyinstaller.org/downloads/)
+
+#### ***Selecione a versão (3.1.2 - utilizado atualmente) ***
+
+![1666190640541](image/README/1666190640541.png)
+
+Aguarde a versão ser baixada e instale ela
+
+![1666190659543](image/README/1666190659543.png)
+
+![1666190676475](image/README/1666190676475.png)![1666190713266](image/README/1666190713266.png)
+
+![1666190730627](image/README/1666190730627.png)
+
+![1666190749355](image/README/1666190749355.png)
+
+***De um Enter no console aberto após finalizar a instalação Enter novamente***
+
+## ***Visual Studio Code***
+
+#### ***Instalando Visual Studio Code e Plugins***
+
+#### Acessar o link [***https://code.visualstudio.com/DOWNLOAD***](https://code.visualstudio.com/DOWNLOAD "https://code.visualstudio.com/DOWNLOAD")
+
+#### ***Baixar Windows e instalar (No caso de quem esta com sistema operacional windows, quem não estiver selecionar a opção que referente ao sistema da sua máquina)***
+
+#### ***Abrir o Visual Studio Code e instalar os seguintes plugins***
+
+#### ***Instalar o Plugin Ruby***
+
+Caminho para instalar os plugins , clique no ícone demostrado abaixo:
+
+![](blob:https://infracommerce.atlassian.net/cca5e4cb-3b58-486a-949c-4b7c1fcca5ae#media-blob-url=true&id=c956204f-02ed-44ea-9954-3bba80958c9c&collection=contentId-2338833576&contextId=2338833576&mimeType=image%2Fpng&name=image-20211022-235240.png&size=48566&height=367&width=533&alt=)![1666190808032](image/README/1666190808032.png)
+
+![1666190826807](image/README/1666190826807.png)
+
+#### ***Instalar o plugin do cucumber***
+
+![1666190858273](image/README/1666190858273.png)
+
+![1666190873485](image/README/1666190873485.png)
+
+***Instalar o plugin vscode icons***
+
+![1666190899099](image/README/1666190899099.png)
+
+## ***Instalando Capybara***
+
+#### ***Abrir o console e Inserir  ***`gem install capybara`*** em seguida clicar em Enter***
+
+![1666190944067](image/README/1666190944067.png)
+
+![1666190965226](image/README/1666190965226.png)
+
+## ***Instalando Rspec***
+
+#### ***Abrir o console e Inserir  ***`gem install rspec`*** em seguida clicar em Enter***
+
+![1666191002881](image/README/1666191002881.png)
+
+![1666191024268](image/README/1666191024268.png)
+
+## ***Instalando os drivers***
+
+#### ***ChromerDriver***
+
+#### ***Acessar o link ***[![](https://ssl.gstatic.com/atari/images/public/favicon.ico)ChromeDriver - WebDriver for Chrome - Downloads](https://chromedriver.chromium.org/downloads)***  e baixar a versão compatível com seu navegador***
+
+![1666191057967](image/README/1666191057967.png)
+
+***EXTRAIA O ARQUIVO DENTRO DA PASTA USR/LOCAL/BIN PARA MAC E LINUX. PARA WINDOWS APENAS EXTRAIA DENTRO DA PASTA C:/WINDOWS.***
+
+![1666191090804](image/README/1666191090804.png)
+
+![1666191109385](image/README/1666191109385.png)
+
+## ***Instalando Mozila***
+
+#### Acessar o link [***https://github.com/mozilla/geckodriver/releases***](https://github.com/mozilla/geckodriver/releases "https://github.com/mozilla/geckodriver/releases")
+
+#### ***Baixar a versão referente ao seu sistema operacional***
+
+![](blob:https://infracommerce.atlassian.net/00b65c7b-5b56-45ac-94a7-e9ff1eba1953#media-blob-url=true&id=a9c0d1e7-f3db-4786-8583-c0574e07fca1&collection=contentId-2338833576&contextId=2338833576&mimeType=image%2Fpng&name=image-20210622-050939.png&size=67515&width=1353&height=570&alt=)![1666191144278](image/README/1666191144278.png)
 
 # Execução Testes:
 
-
-
+ Cucumber - executa dos os testes já criados cucumber -t @tag - executa os cenários que possuam a tag informada (essa tag deve estar no arquivo .feature acima do cenário desejado) allure server reports_allure - iniciar o allure report
 
 # Desafios encontrados durante o teste:
 
+* A api do github, possui algumas instabilidade, o que demorou para validar os testes
+* Não ter recebido as collections das api, foi necessário montar e validar.
+* Criar conta, para disponibilizar para a Empresa nos testes.
